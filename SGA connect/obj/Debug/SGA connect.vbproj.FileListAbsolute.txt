@@ -1,0 +1,27 @@
+I:\workspace\SGA connect\bin\SGA connect.dll.config
+I:\workspace\SGA connect\bin\SGA connect.dll
+I:\workspace\SGA connect\bin\SGA connect.pdb
+I:\workspace\SGA connect\bin\SGA connect.xml
+I:\workspace\SGA connect\obj\Debug\SGA_connect.Resources.resources
+I:\workspace\SGA connect\obj\Debug\SGA connect.vbproj.GenerateResource.Cache
+I:\workspace\SGA connect\obj\Debug\SGA connect.dll
+I:\workspace\SGA connect\obj\Debug\SGA connect.xml
+I:\workspace\SGA connect\obj\Debug\SGA connect.pdb
+D:\SGA connect\bin\SGA connect.dll.config
+D:\SGA connect\bin\SGA connect.dll
+D:\SGA connect\bin\SGA connect.pdb
+D:\SGA connect\bin\SGA connect.xml
+D:\SGA connect\obj\Debug\SGA_connect.Resources.resources
+D:\SGA connect\obj\Debug\SGA connect.vbproj.GenerateResource.Cache
+D:\SGA connect\obj\Debug\SGA connect.dll
+D:\SGA connect\obj\Debug\SGA connect.xml
+D:\SGA connect\obj\Debug\SGA connect.pdb
+C:\Users\Jessica\Documents\GitHub\CMPS285_Team1\SGA connect\bin\SGA connect.dll.config
+C:\Users\Jessica\Documents\GitHub\CMPS285_Team1\SGA connect\bin\SGA connect.dll
+C:\Users\Jessica\Documents\GitHub\CMPS285_Team1\SGA connect\bin\SGA connect.pdb
+C:\Users\Jessica\Documents\GitHub\CMPS285_Team1\SGA connect\bin\SGA connect.xml
+C:\Users\Jessica\Documents\GitHub\CMPS285_Team1\SGA connect\obj\Debug\SGA_connect.Resources.resources
+C:\Users\Jessica\Documents\GitHub\CMPS285_Team1\SGA connect\obj\Debug\SGA connect.vbproj.GenerateResource.Cache
+C:\Users\Jessica\Documents\GitHub\CMPS285_Team1\SGA connect\obj\Debug\SGA connect.dll
+C:\Users\Jessica\Documents\GitHub\CMPS285_Team1\SGA connect\obj\Debug\SGA connect.xml
+C:\Users\Jessica\Documents\GitHub\CMPS285_Team1\SGA connect\obj\Debug\SGA connect.pdb

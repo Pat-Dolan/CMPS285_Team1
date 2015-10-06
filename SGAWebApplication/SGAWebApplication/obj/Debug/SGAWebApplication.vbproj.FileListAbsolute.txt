@@ -16,12 +16,3 @@ I:\workspace\SGA\SGAWebApplication\SGAWebApplication\SGAWebApplication\obj\Debug
 I:\workspace\SGA\SGAWebApplication\SGAWebApplication\SGAWebApplication\obj\Debug\SGAWebApplication.dll
 I:\workspace\SGA\SGAWebApplication\SGAWebApplication\SGAWebApplication\obj\Debug\SGAWebApplication.xml
 I:\workspace\SGA\SGAWebApplication\SGAWebApplication\SGAWebApplication\obj\Debug\SGAWebApplication.pdb
-C:\Users\Jessica\Documents\GitHub\CMPS285_Team1\SGAWebApplication\SGAWebApplication\bin\SGAWebApplication.dll.config
-C:\Users\Jessica\Documents\GitHub\CMPS285_Team1\SGAWebApplication\SGAWebApplication\bin\SGAWebApplication.dll
-C:\Users\Jessica\Documents\GitHub\CMPS285_Team1\SGAWebApplication\SGAWebApplication\bin\SGAWebApplication.pdb
-C:\Users\Jessica\Documents\GitHub\CMPS285_Team1\SGAWebApplication\SGAWebApplication\bin\SGAWebApplication.xml
-C:\Users\Jessica\Documents\GitHub\CMPS285_Team1\SGAWebApplication\SGAWebApplication\obj\Debug\SGAWebApplication.Resources.resources
-C:\Users\Jessica\Documents\GitHub\CMPS285_Team1\SGAWebApplication\SGAWebApplication\obj\Debug\SGAWebApplication.vbproj.GenerateResource.Cache
-C:\Users\Jessica\Documents\GitHub\CMPS285_Team1\SGAWebApplication\SGAWebApplication\obj\Debug\SGAWebApplication.dll
-C:\Users\Jessica\Documents\GitHub\CMPS285_Team1\SGAWebApplication\SGAWebApplication\obj\Debug\SGAWebApplication.xml
-C:\Users\Jessica\Documents\GitHub\CMPS285_Team1\SGAWebApplication\SGAWebApplication\obj\Debug\SGAWebApplication.pdb

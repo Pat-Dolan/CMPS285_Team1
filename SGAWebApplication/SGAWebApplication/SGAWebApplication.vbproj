@@ -81,25 +81,9 @@
     <Import Include="System.Web.UI.HtmlControls" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="app\Home.html" />
-    <Content Include="app\News.html" />
-    <Content Include="app\shell.html" />
-    <Content Include="app\sidebar.html" />
-    <Content Include="app\topbar.html" />
     <Content Include="css\login.css" />
     <Content Include="css\reset.css" />
-    <Content Include="fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="images\hover.gif" />
-    <Content Include="images\seperator.gif" />
-    <Content Include="images\sga_color_logo.png" />
-    <Content Include="images\sga_logo.gif" />
-    <Content Include="images\uncs.jpg" />
     <Content Include="index.html" />
-    <Content Include="js\bootstrap.js" />
-    <Content Include="js\bootstrap.min.js" />
-    <Content Include="js\login.js" />
-    <Content Include="js\npm.js" />
-    <Content Include="js\sidebar.js" />
     <Content Include="login.css" />
     <Content Include="Login.html" />
     <Content Include="nothing.html" />
@@ -135,10 +119,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>

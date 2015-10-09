@@ -1,0 +1,98 @@
+﻿
+
+ .southeastern ul {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:1.4em;
+    color:gold;
+    grid-rowspan:inherit;
+     list-style: none;
+      text-align: left;
+      padding:0;
+      margin:0;
+
+   
+}
+ .southeastern ul li:first-child {
+    font-size:2em;
+      
+}
+
+    .southeastern a{
+  text-decoration: none;
+  color: gold;
+  display: block;
+  transition: .3s background-color;
+    }
+.nav ul {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+ .gradient {
+
+     /* Fallback (could use .jpg/.png alternatively) */
+     background-color: darkgreen;
+
+
+     /* Safari 4, Chrome 1-9, iOS 3.2-4.3, Android 2.1-3.0 */
+     background-image:
+     -webkit-gradient(linear, left top, right top, from(#003300), to(#008000));
+
+     /* Safari 5.1, iOS 5.0-6.1, Chrome 10-25, Android 4.0-4.3 */
+     background-image:
+     -webkit-linear-gradient(left, #003300, #008000);
+
+     /* Firefox 3.6 - 15 */
+     background-image:
+     -moz-linear-gradient(left, #003300, #008000);
+
+     /* Opera 11.1 - 12 */
+     background-image:
+     -o-linear-gradient(left, #003300, #008000);
+
+     /* Opera 15+, Chrome 25+, IE 10+, Firefox 16+, Safari 6.1+, iOS 7+, Android 4.4+ */
+     background-image:
+     linear-gradient(to right, #003300, #008000);
+
+ }
+.nav li {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.2em;
+  line-height: 40px;
+  height: 40px;
+  border-bottom: 1px solid #888;
+}
+ 
+.nav a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  transition: .3s background-color;
+}
+ 
+.nav a:hover {
+  background-color: gold;
+}
+ 
+.nav a.active {
+  background-color: #fff;
+  color: #444;
+  cursor: default;
+}
+ 
+@media screen and (min-width: 600px) {
+    .nav li {
+        width: 120px;
+        border-bottom: none;
+        height: 50px;
+        line-height: 50px;
+        font-size: 1.4em;
+    }
+
+    /* Option 1 - Display Inline */
+    .nav li {
+        display: inline-block;
+        margin-right: -4px;
+    }
+}

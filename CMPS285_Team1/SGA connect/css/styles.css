@@ -1,0 +1,43 @@
+.loginback {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -100; /* puts image into the background */
+}
+
+#cssmenu {
+  list-style: none;
+  margin:0 ;
+  padding: 0;
+  width: 12em;
+  float:left;
+  font-size:20px;
+}
+#cssmenu li {
+  font: 67.5% "Lucida Sans Unicode", "Bitstream Vera Sans", "Trebuchet Unicode MS", "Lucida Grande", Verdana, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+#cssmenu a {
+  background: #333;
+  border-bottom: 1px solid #393939;
+  color: #ccc;
+  display: block;
+  margin: 0;
+  padding: 8px 12px;
+  text-decoration: none;
+  font-weight: normal;
+}
+#cssmenu a:hover {
+  background: #2580a2 url("../images/hover.gif") left center no-repeat;
+  color: #fff;
+  padding-bottom: 8px;
+}
+
+#nav {
+
+    
+}

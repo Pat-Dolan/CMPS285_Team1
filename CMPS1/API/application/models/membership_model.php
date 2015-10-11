@@ -5,7 +5,7 @@ class Membership_model extends CI_Model{
         $this->db->where('password',$password);
         $query = $this->db->get('users');
         if($query->num_rows() == 1){
-            return true;
+            return $query;
         }
 
     }

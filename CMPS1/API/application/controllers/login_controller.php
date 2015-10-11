@@ -14,10 +14,11 @@ class Login_controller extends CI_Controller
         $this->load->model('membership_model');
         $query = $this->membership_model->validate($username,$password);
         if($query) {
-            $data['status'] = 'Logged in';
+            $data['status']= true;
         }
         else{
-            $data['status'] = 'not logged in ';
+            $data['status'] = false;
+
         }
 
         $this->load->view('verify', $data);

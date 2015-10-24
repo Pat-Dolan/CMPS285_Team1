@@ -4,24 +4,23 @@ class Login_controller extends CI_Controller
 
     function validate(){
 //       when posting  json data to the api
-        $json = key($this->input->post(NULL, TRUE));
-        $json = json_decode($json);
-        $username = $json->username;
-        $password = md5($json->password);
+        $json = json_decode(trim(file_get_contents('php://input')), true);
+        $username = $json['username'];
+        $password = md5($json['password']);
 //        when posting with a normal post method with parameters
 //        $username = $this->input->post('username');
 //       $password = md5($this->input->post('password'));
         $this->load->model('membership_model');
         $query = $this->membership_model->validate($username,$password);
-        if(isset($query)) {
-            $data = $query;
+        if($query) {
+            $data['status']= true;
         }
         else{
-            $data = null;
+            $data['status'] = false;
+
         }
 
-        echo json_encode( $data );
-
+        $this->load->view('verify', $data);
     }
 
 }

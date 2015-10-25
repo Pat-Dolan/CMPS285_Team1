@@ -13,15 +13,15 @@ class Login_controller extends CI_Controller
 //       $password = md5($this->input->post('password'));
         $this->load->model('membership_model');
         $query = $this->membership_model->validate($username,$password);
-        if(isset($query)) {
-            $data = $query;
+        if($query) {
+            $data['status']= true;
         }
         else{
-            $data = null;
+            $data['status'] = false;
+
         }
 
-        echo json_encode( $data );
-
+        $this->load->view('verify', $data);
     }
 
 }

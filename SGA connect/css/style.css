@@ -1,0 +1,41 @@
+﻿/*#region Override background color theme */
+
+/*For Bootstrap 3*/
+.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
+
+
+body {
+    background-color:whitesmoke;
+   
+    
+}
+h1 {
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:30px;
+    line-height:10px;
+    color:Gold;
+}
+h2 {
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:20px;
+    color:gold;
+}
+ul  {
+    list-style: none;
+    background-color:#1c7543;
+    
+}
+
+
+ ul#menu li {
+    display:inline-block;
+    
+}
+ul#top-right li{
+    float:right;
+    display:inline-block;
+    padding:inherit;
+    background-color:#006633;
+    color:white;
+ 
+}

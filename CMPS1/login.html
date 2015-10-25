@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>SGA Login</title>
     <script src ="angular.js"></script>
     <script src = "app.js"></script>
     <link rel="stylesheet" href="/CMPS1/css/login.css">
@@ -14,14 +14,18 @@
         <div class="body"></div>
         <div class="grad"></div>
         <div class="header">
-            <div><a style="color:gold">SGA</a><span><a style="color: seagreen">Connect</a></span></div>
+            <br><br><br>
+            <div><a style="color:gold"><b>SGA</b></a><span><a style="color: darkgreen"><b>Connect</b></a></span></div>
         </div>
+
         <br><br>
+
         <div class="login">
-            {{ error }}
-            <input type="text" placeholder="username" ng-model="username" required><br>
-            <input type="password" placeholder="password" ng-model="password" required><br>
-            <input type="button" value="Login" ng-click="login(username,password)">
+            <h3><div  ng-show="istrue" ><h2 style="color: red">invalid username/password</h2></div></h3>
+            <input type="text" placeholder="username" ng-model="username" required="true" autofocus="true"  onkeydown="if (event.keyCode == 13) document.getElementById('login').click()"><br>
+            <input type="password" placeholder="password" ng-model="password" required="true" autofocus="true"  onkeydown="if (event.keyCode == 13) document.getElementById('login').click()"><br>
+            <input type="button" id="login" value="Login" ng-click="login(username,password)"><br>
+
         </div>
 
     </div>

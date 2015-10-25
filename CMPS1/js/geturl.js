@@ -50,5 +50,16 @@ function (data) {
     if (!fetch || !embed) return;
     embed.innerHTML = fetch.innerHTML;
 
-}
-);
+});
+
+getURL(
+    '/CMPS1/link/footer.html',
+    function (data) {
+        var el = document.createElement(el);
+        el.innerHTML = data;
+        var fetch = el.querySelector('#new-footer');
+        var embed = document.querySelector('#footer');
+        if (!fetch || !embed) return;
+        embed.innerHTML = fetch.innerHTML;
+
+    });

@@ -5,13 +5,12 @@
     var app = angular.module('sga',[]);
     app.controller('MainController', function($scope,$http){
         $scope.login = function(username, password) {
-            var bool = true;
             if (username == null || password == null) {
 
                 $scope.istrue = function (bool) {
 
 
-                    return istrue;
+                    return bool;
                 }
             }
             else {
@@ -22,13 +21,13 @@
                         'username': username,
                         'password': password,
                     },
-                    headers: {'Content-Type': 'application/json'}
+                    headers: {'Content-Type': 'application/x-www-form-urlencoded'}
                 }
 
                 $http(req).then(function (response) {
-                    
+
                     bool = response.data;
-                    if (bool === "true") {
+                    if (bool) {
                         window.open('../CMPS1/index.html', "_self");
 
                     }

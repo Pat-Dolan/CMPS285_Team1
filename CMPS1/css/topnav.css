@@ -3,13 +3,13 @@
  }
 
 .navbar-trans {
-    background-color:  rgba(64,212,126,0.9) !important;
+    background-color: rgba(64,212,126,0.9) !important;
     color:black;
 
 }
 
 .navbar-trans li>a:hover,.navbar-trans li>a:focus,.navbar-trans li.active {
-    background-color:rgba(64,212,126,0.9);
+    background-color: rgba(64,212,126,0.9);
     font-size: x-large;
 }
 

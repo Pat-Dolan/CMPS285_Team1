@@ -4,19 +4,28 @@
     .carousel{
 
         margin-top: 0px;
-    }
-    .carousel .item img{
+        margin-left: 25%;
+        margin-right: 25%;
+        align-self:center;
 
-        margin: 0 auto; /* Align slide image horizontally center */
-        height: 500px;
+        background-color: #555555;
+    }
+
+    .carousel .item img, .carousel .item active img{
+
+        margin: auto; /* Align slide image horizontally center */
+        height: 350px;
+
+        width:70%;
+
     }
     .bs-example{
 
-        margin: 60px;
+        margin: 30px ;
     }
 </style>
 <div class="bs-example">
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <div id="myCarousel" class="carousel carousel-fade" data-ride="carousel">
         <!-- Carousel indicators -->
         <ol class="carousel-indicators">
             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -50,11 +59,12 @@
 
         </div>
         <!-- Carousel controls -->
-        <a class="carousel-control left" href="#myCarousel" data-slide="prev">
+        <a class="carousel-control left"  style="color: #009926" href="#myCarousel" data-slide="prev">
             <span class="glyphicon glyphicon-chevron-left"></span>
         </a>
-        <a class="carousel-control right" href="#myCarousel" data-slide="next">
+        <a class="carousel-control right" style="color: #009926" href="#myCarousel" data-slide="next">
             <span class="glyphicon glyphicon-chevron-right"></span>
         </a>
     </div>
+</div>
 <footer id="footer" ng-include="'/CMPS1/tpls/footer.html'"></footer>

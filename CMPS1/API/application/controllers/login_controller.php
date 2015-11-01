@@ -1,4 +1,7 @@
 <?php
+
+session_start();
+
 class Login_controller extends CI_Controller
 {
 

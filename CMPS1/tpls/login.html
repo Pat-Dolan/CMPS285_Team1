@@ -1,16 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>SGA Login</title>
-    <script src ="angular.js"></script>
-    <script src = "app.js"></script>
-    <link rel="stylesheet" href="/CMPS1/css/login.css">
-</head>
-
-<body ng-app = "sga">
-    <div ng-controller="MainController as MainCtrl">
-
+<div ng-controller="LoginController">
+	
+	<link rel="stylesheet" href="/CMPS1/css/login.css">
+	
         <div class="body"></div>
         <div class="grad"></div>
         <div class="header">
@@ -26,10 +17,5 @@
             <input type="text" placeholder="username" ng-model="username" required="true" autofocus="true"  onkeydown="if (event.keyCode == 13) document.getElementById('login').click()"><br>
             <input type="password" placeholder="password" ng-model="password" required="true" autofocus="true"  onkeydown="if (event.keyCode == 13) document.getElementById('login').click()"><br>
             <input type="button" id="login" value="Login" ng-click="login(username,password)"><br>
-
         </div>
-
-    </div>
-    </div>
-</body>
-</html>
+</div>

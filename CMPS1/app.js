@@ -3,12 +3,25 @@
  */
 (function(){
     var app = angular.module('sga',[]);
-    app.controller('MainController', function($scope,$http){
-        $scope.login = function(username, password) {
+
+    app.factory('ContentService', function () {
+        return {
+            url: "tpls/login.html"
+        }
+    })
+
+    app.controller('IndexController', function($scope,$http,ContentService){
+        $scope.content = ContentService;
+        $scope.load = function(url){
+            $scope.content.url = url;   
+        };
+    });
+
+    app.controller('LoginController', function($scope,$http,ContentService){
+            $scope.login = function(username, password) {
             if (username == null || password == null) {
 
                 $scope.istrue = function (bool) {
-
 
                     return bool;
                 }
@@ -16,34 +29,29 @@
             else {
                 var req = {
                     method: 'POST',
-                    url: 'http://localhost:8080/CMPS1/API/index.php/login_controller/validate',
+                    url: 'http://localhost/CMPS1/API/index.php/login_controller/validate',
                     data: {
                         'username': username,
                         'password': password,
                     },
-                    headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+                    headers: {'Content-Type': 'application/json'}
                 }
 
                 $http(req).then(function (response) {
 
                     bool = response.data;
                     if (bool) {
-                        window.open('../CMPS1/index.html', "_self");
+                        ContentService.url = '../CMPS1/tpls/main.html';
 
                     }
                     else {
                         $scope.istrue = function(bool) {
-
-
-                                return istrue;
-
+                            return istrue;
                         }
                     }
                 });
             }
         }
-
     });
-
 
 })();

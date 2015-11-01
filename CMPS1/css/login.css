@@ -7,7 +7,7 @@ body{
     background: #fff;
 
     color: #fff;
-    font-family: Arial;
+    font-family: "brandon-grotesque", Arial, Helvetica, sans-serif;
     font-size: 12px;
 }
 
@@ -19,9 +19,9 @@ body{
     bottom: -40px;
     width: auto;
     height: auto;
-    background-image: url(/CMPS1/images/FlagsDesktop.jpg);
+    background-image: url("../images/FlagsDesktop.jpg");
     background-size: cover;
-    -webkit-filter:blur(1.5px) ;
+    -webkit-filter:blur(1.8px) ;
     z-index: 0;
 }
 
@@ -65,6 +65,17 @@ body{
     width: 350px;
     padding: 10px;
     z-index: 2;
+
+
+}
+.login nav{
+
+    border-radius:4px;
+    border: 2px solid #222222;
+    padding-left: 12%;
+    padding-bottom: 12%;
+    fill-opacity: 0.8;
+
 }
 
 .login input[type=text]{
@@ -78,6 +89,7 @@ body{
     font-size: 16px;
     font-weight: 400;
     padding: 4px;
+
 }
 
 .login input[type=password]{
@@ -97,24 +109,25 @@ body{
 .login input[type=button]{
     width: 260px;
     height: 35px;
-    background: #fff;
-    border: 1px solid #fff;
+    background-color:#4285f4 ;
+    border: 1px solid #4285f4;
     cursor: pointer;
     border-radius: 2px;
-    color: #a18d6c;
+    color: #ffffff;
     font-family: 'Exo', sans-serif;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 400;
     padding: 6px;
     margin-top: 10px;
+    opacity: 0.7;
 }
 
 .login input[type=button]:hover{
-    opacity: 0.8;
+    opacity: 0.9;
 }
 
 .login input[type=button]:active{
-    opacity: 0.6;
+    opacity: 1;
 }
 
 .login input[type=text]:focus{
@@ -131,10 +144,3 @@ body{
     outline: none;
 }
 
-::-webkit-input-placeholder{
-    color: rgba(255,255,255,0.6);
-}
-
-::-moz-input-placeholder{
-    color: rgba(255,255,255,0.6);
-}

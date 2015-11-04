@@ -34,7 +34,7 @@ if($result) {
                     <td>{$row['name']}</td>
                     <td>{$row['added']}</td>
                     <td>{$row['status']}</td>
-                    <td><a href='get_file.php?id={$row['id']}'>Download</a></td>
+                    <td><a href='/CMPS1/Bills/get_file.php?id={$row['id']}'>Download</a></td>
                 </tr>";
         }
         echo '</table>';

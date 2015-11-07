@@ -27,6 +27,22 @@
             $scope.load = function (url) {
                 $scope.content.url = url;
             };
+                var req = {
+                    method: 'GET',
+                    url: 'http://localhost/CMPS1/API/index.php/login_controller/user',
+                    headers: {'Content-Type': 'application/json'}
+                }
+
+                $http(req).then(function (response) {
+                    if (response) {
+                        ContentService.url = '../CMPS1/tpls/main.html';
+
+                    }
+                    else {
+                       ContentService.url = '../CMPS1/tpls/login.html';
+                    }
+                });
+
         });
 
         app.controller('LoginController', function ($scope, $http, ContentService) {
@@ -47,7 +63,7 @@
                             'password': password
                         },
                         headers: {'Content-Type': 'application/json'}
-                    }
+                }
 
                     $http(req).then(function (response) {
 

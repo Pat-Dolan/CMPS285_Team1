@@ -5,6 +5,9 @@ class Membership_model extends CI_Model{
         $this->db->where('password',$password);
         $query = $this->db->get('users');
         if($query->num_rows() == 1){
+        	//verify user is logged in, and if not, redirect to the login page
+			session_start();
+			$_SESSION['username']=$username;
             return $query;
         }
 

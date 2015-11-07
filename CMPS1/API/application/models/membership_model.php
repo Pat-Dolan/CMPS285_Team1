@@ -9,7 +9,5 @@ class Membership_model extends CI_Model{
         }
 
     }
-    function user($firstname,$lastname,$username,$password,$position,$email){
 
-    }
 }

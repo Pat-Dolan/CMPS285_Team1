@@ -1,8 +1,10 @@
-﻿<div id="head" ng-include="'/CMPS1/tpls/topbar.html'"></div>
-<style type="text/css">
-color: #000 !important;
-</style>
-<div>
-News
+﻿<div ng-controller = "NewsController">
+    <div id="head" ng-include="'/CMPS1/tpls/topbar.html'"></div>
+    <style type="text/css"></style>
+    <ul ng-repeat="each in news">
+        <h1>{{each.title}}</h1>
+        <li>{{each.content}}</li>
+    </ul>
+
+    <footer id="footer" ng-include="'/CMPS1/tpls/footer.html'"></footer>
 </div>
-<footer id="footer" ng-include="'/CMPS1/tpls/footer.html'"></footer>

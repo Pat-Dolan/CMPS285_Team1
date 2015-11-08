@@ -6,7 +6,7 @@
 
     app.factory('ContentService', function () {
         return {
-            url: "tpls/login.html"
+            url: "tpls/loading.html"
         }
     });
 

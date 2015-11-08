@@ -22,7 +22,7 @@
     });
 
 
-        app.controller('IndexController', function ($scope, $http, ContentService) {
+    app.controller('IndexController', function ($scope, $http, ContentService) {
             $scope.content = ContentService;
             $scope.load = function (url) {
                 $scope.content.url = url;
@@ -34,7 +34,7 @@
                 }
 
                 $http(req).then(function (response) {
-                    if (response) {
+                    if (response.data) {
                         ContentService.url = '../CMPS1/tpls/main.html';
 
                     }
@@ -42,8 +42,14 @@
                        ContentService.url = '../CMPS1/tpls/login.html';
                     }
                 });
+            $scope.logout = function(){
+                 $http.get('http://localhost/CMPS1/API/index.php/login_controller/logout')
+                    .then(function (response) {
+                     ContentService.url = '../CMPS1/tpls/login.html';
+                    });
+            }
 
-        });
+         });
 
         app.controller('LoginController', function ($scope, $http, ContentService) {
             $scope.login = function (username, password) {

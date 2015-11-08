@@ -24,7 +24,11 @@
         margin: 30px ;
     }
 </style>
-<div class="bs-example">
+<div ng-contorller = "IndeController">
+    <input type="button" id="logout" value="Logout" ng-click="logout()">
+</div>
+<!--  <input type="button" id="login" value="Login" ng-click="login(username,password)"><br>
+ --><div class="bs-example">
     <div id="myCarousel" class="carousel carousel-fade" data-ride="carousel">
         <!-- Carousel indicators -->
         <ol class="carousel-indicators">
@@ -67,4 +71,5 @@
         </a>
     </div>
 </div>
+
 <footer id="footer" ng-include="'/CMPS1/tpls/footer.html'"></footer>

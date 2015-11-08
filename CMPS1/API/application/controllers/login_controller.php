@@ -14,7 +14,7 @@ class Login_controller extends CI_Controller
         $this->load->model('membership_model');
         $query = $this->membership_model->validate($username,$password);
         if($query) {
-            $data['status']= true;
+            $data['status'] = true;
         }
         else{
             $data['status'] = false;
@@ -25,8 +25,16 @@ class Login_controller extends CI_Controller
     }
 
     function user(){
-        $data['user']=$_SESSION['username'];
-
+        if (isset($_SESSION['username'])) {
+            $data['user'] = $_SESSION['username'];  
+        }
+        else{
+            $data['user'] = null;
+        }
         $this->load->view('user', $data);
+    }
+    
+    function logout(){
+        session_destroy();
     }
 }

@@ -7,12 +7,9 @@
     color:black;
 
 }
-
-.navbar-trans li>a:hover,.navbar-trans li>a:focus,.navbar-trans li.active {
-    background-color: rgba(64,212,126,0.9);
-    font-size: x-large;
+.navbar-trans li>a:hover{
+    background-color:rgba(64,212,126,0.9);
 }
-
 .navbar-trans a{
 
     font-family: Verdana, Geneva, sans-serif;

@@ -1,10 +1,61 @@
 ﻿<div ng-controller = "NewsController">
     <div id="head" ng-include="'/CMPS1/tpls/topbar.html'"></div>
     <style type="text/css"></style>
-    <ul ng-repeat="each in news">
-        <h1>{{each.title}}</h1>
-        <li>{{each.content}}</li>
-    </ul>
+    <link rel="stylesheet" href="/CMPS1//css/news.css">
+
+
+
+
+    <link href='http://fonts.googleapis.com/css?family=News+Cycle:400,700' rel='stylesheet' type='text/css'>
+    <link href="http://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+
+    <script>
+        var headers = ["H1","H2","H3","H4","H5","H6"];
+
+        $(".accordion").click(function(e) {
+            var target = e.target,
+                    name = target.nodeName.toUpperCase();
+
+            if($.inArray(name,headers) > -1) {
+                var subItem = $(target).next();
+
+                //slideUp all elements (except target) at current depth or greater
+                var depth = $(subItem).parents().length;
+                var allAtDepth = $(".accordion p, .accordion div").filter(function() {
+                    if($(this).parents().length >= depth && this !== subItem.get(0)) {
+                        return true;
+                    }
+                });
+                $(allAtDepth).slideUp("fast");
+
+                //slideToggle target content and adjust bottom border if necessary
+                subItem.slideToggle("fast",function() {
+                    $(".accordion :visible:last").css("border-radius","0 0 1px 1px");
+                });
+                $(target).css({"border-bottom-right-radius":"0", "border-bottom-left-radius":"0"});
+            }
+        });
+</script>
+
+    <aside class="accordion" >
+<span ng-repeat="each in news">
+        <h2>{{each.title}} <span style="float: right">{{each.news_date}}</span></h2>
+        <p >{{each.content}}</p>
+</span>
+    </aside>
+
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+
 
     <footer id="footer" ng-include="'/CMPS1/tpls/footer.html'"></footer>
 </div>

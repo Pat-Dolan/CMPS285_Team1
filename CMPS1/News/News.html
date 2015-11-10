@@ -1,58 +1,70 @@
 ﻿<div ng-controller = "NewsController">
     <div id="head" ng-include="'/CMPS1/tpls/topbar.html'"></div>
-    <style type="text/css"></style>
-    <link rel="stylesheet" href="/CMPS1//css/news.css">
-
-
-
-
-    <link href='http://fonts.googleapis.com/css?family=News+Cycle:400,700' rel='stylesheet' type='text/css'>
-    <link href="http://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
 
 
 
 
 
-
-
-
-    <script>
-        var headers = ["H1","H2","H3","H4","H5","H6"];
-
-        $(".accordion").click(function(e) {
-            var target = e.target,
-                    name = target.nodeName.toUpperCase();
-
-            if($.inArray(name,headers) > -1) {
-                var subItem = $(target).next();
-
-                //slideUp all elements (except target) at current depth or greater
-                var depth = $(subItem).parents().length;
-                var allAtDepth = $(".accordion p, .accordion div").filter(function() {
-                    if($(this).parents().length >= depth && this !== subItem.get(0)) {
-                        return true;
-                    }
-                });
-                $(allAtDepth).slideUp("fast");
-
-                //slideToggle target content and adjust bottom border if necessary
-                subItem.slideToggle("fast",function() {
-                    $(".accordion :visible:last").css("border-radius","0 0 1px 1px");
-                });
-                $(target).css({"border-bottom-right-radius":"0", "border-bottom-left-radius":"0"});
-            }
-        });
-</script>
-
-    <aside class="accordion" >
-<span ng-repeat="each in news">
-        <h2>{{each.title}} <span style="float: right">{{each.news_date}}</span></h2>
-        <p >{{each.content}}</p>
-</span>
-    </aside>
-
-
+    <!--<link href='http://fonts.googleapis.com/css?family=News+Cycle:400,700' rel='stylesheet' type='text/css'>-->
+    <!--<link href="http://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">-->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'/>
+    <!--<link href="../CMPS1/css/bootstrap.min.css" rel="stylesheet" />-->
+    <link href="../CMPS1/css/app.css" rel="stylesheet" type="text/css" />
+    <script src="../CMPS1/js/bootstrap.min.js"></script>
+
+
+
+    <!--<link rel="stylesheet" href="/CMPS1//css/news.css">-->
+
+<div style="margin-top: 50px">
+
+
+    <div class="container-fluid" >
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3" >
+
+                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default" ng-repeat="each in news">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#{{each.id}}" aria-expanded="false" >
+                                    <article class="even">
+
+                                        <div class="even-date">
+                                            <p class="even-month">{{each.month}}</p>
+                                            <p class="even-day">{{each.day}}</p>
+                                        </div>
+
+                                        <div class="even-desc">
+                                            <h3 class="even-desc-header">{{each.title}}</h3>
+
+
+                                        </div>
+                                    </article>
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="{{each.id}}" class="panel-collapse collapse" role="tabpanel" >
+                            <div class="panel-body">
+
+                                    <p>{{each.content}}</p>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+</div>
+
 
 
 

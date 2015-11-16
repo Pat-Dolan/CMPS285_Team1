@@ -3,38 +3,41 @@
 class Login_controller extends CI_Controller
 {
 
-    function validate(){
+    function validate()
+    {
 //       when posting  json data to the api
         $json = json_decode(trim(file_get_contents('php://input')), true);
         $username = $json['username'];
         $password = md5($json['password']);
-//        when posting with a normal post method with parameters
+////        when posting with a normal post method with parameters
 //        $username = $this->input->post('username');
-//       $password = md5($this->input->post('password'));
+//        $password = md5($this->input->post('password'));
         $this->load->model('membership_model');
-        $query = $this->membership_model->validate($username,$password);
-        if($query) {
-            $data['status'] = true;
-        }
-        else{
+        $query = $this->membership_model->validate($username, $password);
+
+        if (isset($query)) {
+            $data = $query;
+        } else {
             $data['status'] = false;
-
         }
 
-        $this->load->view('verify', $data);
+//        $this->load->view('verify', $data);
+        echo json_encode($data);
     }
 
-    function user(){
+    function user()
+    {
         if (isset($_SESSION['username'])) {
-            $data['user'] = $_SESSION['username'];  
-        }
-        else{
+            $data['user'] = $_SESSION['username'];
+        } else {
             $data['user'] = null;
         }
-        $this->load->view('user', $data);
+//        $this->load->view('verify', $data);
+        echo json_encode($data);
     }
-    
-    function logout(){
+
+    function logout()
+    {
         session_destroy();
     }
 }

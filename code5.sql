@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 01, 2015 at 10:13 PM
+-- Generation Time: Nov 15, 2015 at 10:55 PM
 -- Server version: 10.0.17-MariaDB
--- PHP Version: 5.6.14
+-- PHP Version: 5.5.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -63,7 +63,12 @@ CREATE TABLE `news` (
 --
 
 INSERT INTO `news` (`id`, `news_date`, `title`, `content`) VALUES
-(1, '2015-10-04', 'I have no idea what''s going on...', 'Go Code5!');
+(1, '2015-10-04', 'I have no idea what''s going on...', 'Go Code5!'),
+(2, '2015-11-01', 'news1', 'blahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblah'),
+(3, '2015-11-02', 'news2', 'Model is the place where actual database logic, alogrith exists for your application. Simply it works with data.'),
+(4, '2015-11-03', 'news3', 'Model is the place where actual database logic, alogrith exists for your application. Simply it works with data.'),
+(5, '2015-11-04', 'news4', 'View is the place where actual User Inteface is specified.\r\n\r\nIn this video, you’ll learn how to create a view in codeigniter and load it into the controller for displaying purpose.'),
+(6, '2015-11-05', 'news5', 'Codeigniter is PHP Framework which built on top of the MVC (Model - View - Controller) design pattern.\r\n\r\nIn this video, you’ll be learning about the MVC and how it is implemented in Codeigniter.');
 
 -- --------------------------------------------------------
 
@@ -88,18 +93,11 @@ INSERT INTO `users` (`id`, `first_name`, `last_name`, `username`, `password`, `e
 (2, 'yash', 'malla', 'yash', 'ad84c15856970db1174778eb8aef174d', 'yash_sp2007@yahoo.com'),
 (3, 'sidd', 'sh', 'siddhanta', '4a315d707428056419bbb4aafd3ad620', 'yash.malla@selu.edu'),
 (4, 'jessica', 'G', 'jessica', '5b796f5f7a641d57f5fc4857ec3f9239', 'yash.malla@selu.edu'),
-(5, 'sga', 'sga', 'sga', '5fcb6c59d83260960b81881843798a15', 'sga@sga.com'),
-(6, 'jenna', 'mchugh', 'jenna', '5b796f5f7a641d57f5fc4857ec3f9239', 'jenna@mail.com');
+(5, 'sga', 'sga', 'sga', '5fcb6c59d83260960b81881843798a15', 'sga@sga.com');
 
 --
 -- Indexes for dumped tables
 --
-
---
--- Indexes for table `bills`
---
-ALTER TABLE `bills`
-  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `news`
@@ -118,20 +116,15 @@ ALTER TABLE `users`
 --
 
 --
--- AUTO_INCREMENT for table `bills`
---
-ALTER TABLE `bills`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
---
 -- AUTO_INCREMENT for table `news`
 --
 ALTER TABLE `news`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

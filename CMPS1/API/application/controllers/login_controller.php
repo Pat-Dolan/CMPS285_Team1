@@ -15,11 +15,17 @@ class Login_controller extends CI_Controller
         $this->load->model('membership_model');
         $query = $this->membership_model->validate($username, $password);
 
-        if (isset($query)) {
-            $data = $query;
+         if (isset($query)) {
+            $data["success"]= true;
         } else {
-            $data['status'] = false;
+            $data['success'] = false;
+            $data['message'] = "Username or password is incorrect";
         }
+        // if (isset($query)) {
+        //     $data = $query;
+        // } else {
+        //     $data['status'] = false;
+        // }
 
 //        $this->load->view('verify', $data);
         echo json_encode($data);

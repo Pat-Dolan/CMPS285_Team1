@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/CMPS1.iml" filepath="$PROJECT_DIR$/.idea/CMPS1.iml" />
+      <module fileurl="file://C:/xampp/htdocs/CMPS1/.idea/CMPS1.iml" filepath="C:/xampp/htdocs/CMPS1/.idea/CMPS1.iml" />
     </modules>
   </component>
 </project>

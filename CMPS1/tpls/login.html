@@ -15,8 +15,8 @@
     <div class="login">
         <nav>
             <div >
-                <div style=padding-left:20% ng-show="(!istrue)" ><h2 style="color:gold">Login Here </h2></div>
-                <div  ng-show="istrue" ><h2 style="color: red">Invalid username/password</h2></div>
+                <div style=padding-left:18% ng-show="(!istrue)" ><h2 style="color:gold"> LOGIN HERE </h2></div>
+                <div  ng-show="istrue" ><h3 style="color: red">invalid username/password</h3></div>
             </div>
             <input type="text" placeholder="username" ng-model="username" required="required" autofocus="autofocus"  onkeydown="if (event.keyCode == 13) document.getElementById('login').click()"><br>
             <input type="password" placeholder="password" ng-model="password" required="required" autofocus="autofocus"  onkeydown="if (event.keyCode == 13) document.getElementById('login').click()"><br>

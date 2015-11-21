@@ -5,10 +5,15 @@
 .navbar-trans {
     background-color: rgba(64,212,126,0.9) !important;
     color:black;
+    cursor: pointer;
 
 }
+
 .navbar-trans li>a:hover{
     background-color:rgba(64,212,126,0.9);
+
+    cursor: hand;
+
 }
 .navbar-trans a{
 

@@ -1,0 +1,196 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 200%;
+}
+
+.navbar{
+    margin-bottom: 0px;
+    padding: 5px 3px;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+@media (max-width: 522px) {
+    .navbar-header{
+        position: relative;
+    }
+    .navbar img{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        width: 15%;
+    }
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: black;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: #777;
+}
+
+.navbar-toggle{
+    margin-top: 5%;
+}
+
+.cbp-af-header-shrink{
+    padding-top: 0px;
+    padding-bottom: 0px;
+    opacity: 0.9;
+}
+
+.fill-screen{
+    background-size: cover;
+    background-position: center;
+}
+
+@media (max-width: 1024px) {
+    .fixed-attachment {
+        background-attachment: scroll;
+    }
+}
+
+.content-filler{
+    min-height: 450px;
+    background-color: #adadad;
+}
+
+.fixed-attachment{
+    background-attachment: fixed;
+}
+.text-about {
+    text-align: center;
+    padding-top: 35px;
+}
+
+.text-about h1 {
+    font-size: 44px;
+}
+
+.text-about p {
+    font-size: 18px;
+}
+
+/*.activity-section {*/
+    /*margin: 50px;*/
+/*}*/
+
+.activity-element {
+    text-align: center;
+}
+
+.activity-element img {
+    width: 150px;
+    height: 150px;
+}
+
+ footer {
+    background-color: #f8f8f8;
+    padding: 5px;
+    text-align: center;
+}
+img{
+    background-size: 70%;
+}
+
+
+.carousel{
+
+    margin-top: 100px;
+}
+.carousel .item img{
+    margin: 0 auto; /* Align slide image horizontally center */
+    height: 500px;
+}
+.bs-example{
+    margin: 60px;
+}
+
+.logo {
+    background: url("https://gdata.selu.edu/_new-resources/img/black_logo.png");
+    background-repeat: no-repeat;
+    height: 140px;
+    display: block;
+    width: 215px;
+    margin-top: 25px;
+    padding: 0;
+}
+
+table{
+    margin-top: 35px;
+}
+
+.table-striped{
+    background-color: lightgray;
+}
+
+
+.newspaper {
+    -webkit-column-count: 3; /* Chrome, Safari, Opera */
+    -moz-column-count: 3; /* Firefox */
+    column-count: 3;
+
+    -webkit-column-gap: 40px; /* Chrome, Safari, Opera */
+    -moz-column-gap: 40px; /* Firefox */
+    column-gap: 40px;
+
+    -webkit-column-rule: 1.5px outset black; /* Chrome, Safari, Opera */
+    -moz-column-rule: 1.5px outset black; /* Firefox */
+    column-rule: 1.5px outset black;
+}
+
+.even {
+    padding: 1rem 1rem 1rem 0;
+    display: table;
+
+}
+
+.even-date {
+    width: 6rem;
+    margin: 0 auto 1rem;
+    display: table-cell;
+    width: auto;
+    border: 4px black;
+}
+.even-date .even-month {
+    margin: 0;
+    font-size: medium;
+    background: mediumturquoise;
+    padding: 0.7rem 3rem;
+    text-align: center;
+    border: 4px black;
+}
+.even-date .even-day {
+    margin: 0;
+    background-color: lightgray;
+    padding: 0.5rem 2rem;
+    text-align: center;
+    font-size: 2rem;
+    border: 4px black;
+}
+
+.even-desc {
+    padding: 0 0 0 1rem;
+    text-align: left;
+    display: table-cell;
+    vertical-align: top;
+}
+.even-desc .even-desc-header {
+    margin: 0 0 0.5rem 0;
+    padding: 0;
+    font-size: large;
+}
+.even-desc .even-desc-detail {
+    margin: 0 0 0.25rem;
+    padding: 0;
+}
+.even-desc .even-desc-time {
+    font-weight: bold;
+}
+.even-desc .rsvp.button {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin: 0;
+}

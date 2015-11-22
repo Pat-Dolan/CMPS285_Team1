@@ -11,7 +11,7 @@ class Membership_model extends CI_Model
             $row = $query->row_array();
 
             $results = array(
-                'status' => true,
+                'success' => true,
                 'username' => $row['username'],
                 'first_name' => $row['first_name'],
                 'last_name' => $row['last_name'],
@@ -19,14 +19,6 @@ class Membership_model extends CI_Model
                 'type' => $row['type']
 
             );
-            $_SESSION['username'] = $username;
-            if(!isset($_SESSION))
-            {
-                session_start();
-            }else{
-                session_destroy();
-            }
-            session_start();
             return $results;
             //verify user is logged in, and if not, redirect to the login page
 

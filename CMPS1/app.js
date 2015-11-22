@@ -21,9 +21,6 @@
                 templateUrl: 'login/login.view.html',
                 controllerAs: 'vm'
             })
-
-
-
             .otherwise({ redirectTo: '/login' });
     }
 
@@ -45,7 +42,6 @@
             var restrictedPage = $.inArray($location.path(), ['/login']) === -1;
             //var unrestrictedPage = $.inArray($location.path(), ['/','/about']) === -1;
             var loggedIn = $rootScope.globals.currentUser;
-            console.log(loggedIn);
             if (restrictedPage && !loggedIn) {
                 $location.path('/login');
             }

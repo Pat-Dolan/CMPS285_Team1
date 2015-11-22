@@ -16,7 +16,7 @@ class Login_controller extends CI_Controller
         $query = $this->membership_model->validate($username, $password);
 
          if (isset($query)) {
-            $data["success"]= true;
+            $data= $query;
         } else {
             $data['success'] = false;
             $data['message'] = "Username or password is incorrect";

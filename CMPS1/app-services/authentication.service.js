@@ -34,6 +34,19 @@
                  headers: {'Content-Type': 'application/json'}
              };
             $http(req).success(function(response){
+                var $data = response;
+                $rootScope.globalProperties = {
+                    properties: {
+                        email: $data["email"],
+                        firstname : $data["first_name"],
+                        lastname : $data["last_name"],
+                        type: $data["type"]
+
+                    }
+                };
+                $cookieStore.put('globalProperties', $rootScope.globalProperties);
+
+                //console.log($rootScope.globals.properties.email);
                 callback(response);
             });
         }
@@ -50,6 +63,7 @@
 
             $http.defaults.headers.common['Authorization'] = 'Basic ' + authdata; // jshint ignore:line
             $cookieStore.put('globals', $rootScope.globals);
+
         }
 
         function ClearCredentials() {

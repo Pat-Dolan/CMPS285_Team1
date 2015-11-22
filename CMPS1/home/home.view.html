@@ -31,18 +31,16 @@
     <script src="js/bootstrap.min.js"></script>
 
     <!-- Plugin JavaScript -->
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="/CMPS1/Content/js/jquery.easing.1.3.min.js"></script>
     <script src="js/classie.js"></script>
     <script src="js/cbpAnimatedHeader.js"></script>
 
-
-
-    <!-- Custom Theme JavaScript -->
-    <script src="js/agency.js"></script>
     <!--<link href="/CMPS1/css/topnav.css" rel="stylesheet" />-->
 
     <script src="js/bootstrap.min.js"></script>
     <script src="js/agency.js"></script>
+    <script src="/CMPS1/js/script.js"></script>
+
 
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top">
@@ -63,17 +61,26 @@
                 <ul class="nav navbar-nav navbar-right">
 
                     <li>
-                        <a class="page-scroll" ng-click="vm.refresh()" href="#main">Home</a>
+                        <a class="page-scroll" ng-click = "vm.refresh()" href="#main">Home</a>
                     </li>
                     <li>
-                        <a class="page-scroll" ng-click="vm.refresh()" href="#news">News</a>
+                        <a class="page-scroll" ng-click = "vm.refresh()" href="#news">News</a>
                     </li>
                     <li>
-                        <a class="page-scroll" ng-click="vm.refresh()" href="#about">About</a>
+                        <a class="page-scroll"ng-click = "vm.refresh()" href="#about">About</a>
+                    </li>
+                    <li ng-show = "vm.checkAdmin()">
+
+                        <a href="#admin">ADMIN</a>
                     </li>
                     <li>
                         <a ng-click="vm.logout()">Logout</a>
                     </li>
+
+                    <li>
+                       <h1>HI, {{vm.getUsername()}}</h1>
+                    </li>
+
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -199,8 +206,3 @@
 <!--about page here-->
  <div id="about" ng-include="'../CMPS1/About/about.view.html'"></div>
 
-
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-
-<script src="/CMPS1/js/script.js"></script>

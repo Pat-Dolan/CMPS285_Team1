@@ -10,9 +10,10 @@ body {
 
     margin: 20px auto;
 
+    cursor: hand;
 }
 .accordion h1, h2, h3, h4 {
-    cursor: pointer;
+    cursor:hand;
 }
 .accordion h2, h3, h4 {
     font-family: "News Cycle";
@@ -27,6 +28,7 @@ body {
 }
 .accordion h1:hover {
     color: #4afcdc;
+
 }
 .accordion h1:first-child {
     border-radius: 1px 1px 0 0;

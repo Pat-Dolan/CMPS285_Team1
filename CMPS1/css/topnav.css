@@ -1,6 +1,13 @@
 ﻿.icon-bar {
      background-color:black;
  }
+@font-face {
+    font-family: aroma-bold;
+    src: url(/fonts/aroma-bold.ttf);
+}
+nav{
+    font-family: aroma-bold;
+}
 
 .navbar-trans {
     background-color: rgba(64,212,126,0.9) !important;
@@ -11,13 +18,13 @@
 
 .navbar-trans li>a:hover{
     background-color:rgba(64,212,126,0.9);
+    font-family: aroma-bold;
 
     cursor: hand;
-
 }
 .navbar-trans a{
 
-    font-family: Verdana, Geneva, sans-serif;
+    font-family: aroma-bold;
     color:white;
     font-size: 20px;
  line-height: 26px;
@@ -34,3 +41,23 @@
     overflow:auto;
     position:relative;
 }
+nav.navbar.shrink {
+    min-height: 35px;
+}
+
+nav.shrink a {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    font-size: 15px;
+}
+
+nav.shrink .navbar-brand {
+    font-size: 25px;
+}
+
+nav.shrink .navbar-toggle {
+    padding: 4px 5px;
+    margin: 8px 15px 8px 0;
+}
+
+

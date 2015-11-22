@@ -815,7 +815,7 @@ class CI_Form_validation {
 				}
 			}
 
-			// Did the rule test negatively? If so, grab the error.
+			// Did the rule CMPS1 negatively? If so, grab the error.
 			if ($result === FALSE)
 			{
 				// Callable rules might not have named error messages
@@ -1071,7 +1071,7 @@ class CI_Form_validation {
 	// --------------------------------------------------------------------
 
 	/**
-	 * Performs a Regular Expression match test.
+	 * Performs a Regular Expression match CMPS1.
 	 *
 	 * @param	string
 	 * @param	string	regex

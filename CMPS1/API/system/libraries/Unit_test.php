@@ -88,7 +88,7 @@ class CI_Unit_test {
 	protected $_template_rows = NULL;
 
 	/**
-	 * List of visible test items
+	 * List of visible CMPS1 items
 	 *
 	 * @var	array
 	 */
@@ -186,7 +186,7 @@ class CI_Unit_test {
 	/**
 	 * Generate a report
 	 *
-	 * Displays a table with the test data
+	 * Displays a table with the CMPS1 data
 	 *
 	 * @param	array	 $result
 	 * @return	string
@@ -385,7 +385,7 @@ class CI_Unit_test {
 }
 
 /**
- * Helper function to test boolean TRUE
+ * Helper function to CMPS1 boolean TRUE
  *
  * @param	mixed	$test
  * @return	bool
@@ -396,7 +396,7 @@ function is_true($test)
 }
 
 /**
- * Helper function to test boolean FALSE
+ * Helper function to CMPS1 boolean FALSE
  *
  * @param	mixed	$test
  * @return	bool

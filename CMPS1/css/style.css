@@ -2,9 +2,15 @@
 @import url(http://fonts.googleapis.com/css?family=Bitter:400);
 
 html,body {
+<<<<<<< HEAD
+    height:100%;
+    background:center no-repeat fixed url('http://www.hollyandsmith.com/portfolio/images/slutech-render1.jpg');
+    background-size: cover;
+=======
     /*height:100%;*/
     /*background:center no-repeat fixed url('http://www.hollyandsmith.com/portfolio/images/slutech-render1.jpg');*/
     /*background-size: cover;*/
+>>>>>>> refs/remotes/origin/master
     color:#444;
     font-family: aroma-bold;
 }
@@ -128,6 +134,17 @@ a:hover {
     line-height: 30px;
 }
 
+<<<<<<< HEAD
+section {
+    padding-top:70px;
+    padding-bottom:50px;
+    min-height:100%;
+    min-height:calc(100% - 0);
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+=======
 /*section {*/
     /*padding-top:25px;*/
     /*padding-bottom:50px;*/
@@ -137,6 +154,7 @@ a:hover {
     /*-moz-transform-style: preserve-3d;*/
     /*transform-style: preserve-3d;*/
 /*}*/
+>>>>>>> refs/remotes/origin/master
 
 @media (min-width:768px) {
     .v-center {

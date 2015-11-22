@@ -1,91 +1,58 @@
-/**
- * Created by Code5 on 10/10/2015.
- */
-(function () {
-    var app = angular.module('sga', []);
+﻿(function () {
+    'use strict';
 
-    app.factory('ContentService', function () {
-        return {
-            url: "tpls/loading.html"
+    angular
+        .module('app', ['ngRoute', 'ngCookies'])
+        .config(config)
+        .run(run);
+
+
+    config.$inject = ['$routeProvider', '$locationProvider'];
+    function config($routeProvider, $locationProvider) {
+        $routeProvider
+            .when('/', {
+                controller: 'HomeController',
+                templateUrl: 'home/home.view.html',
+                controllerAs: 'vm'
+            })
+
+            .when('/login', {
+                controller: 'LoginController',
+                templateUrl: 'login/login.view.html',
+                controllerAs: 'vm'
+            })
+
+
+
+            .otherwise({ redirectTo: '/login' });
+    }
+
+    run.$inject = ['$rootScope', '$location', '$cookieStore', '$http'];
+    function run($rootScope, $location, $cookieStore, $http) {
+        // keep user logged in after page refresh
+        //$scope.content = ContentService;
+        //$scope.load = function (url) {
+        //    $scope.content.url = url;
+        //};
+
+        $rootScope.globals = $cookieStore.get('globals') || {};
+        if ($rootScope.globals.currentUser) {
+            $http.defaults.headers.common['Authorization'] = 'Basic ' + $rootScope.globals.currentUser.authdata; // jshint ignore:line
         }
-    });
 
-    app.controller('NewsController', function ($scope, $http, ContentService) {
-        //$scope.get_news = function () {
-
-            $http.get('http://localhost/CMPS1/API/index.php/news_controller/news')
-                .success(function (data) {
-                $scope.news = data;
-
-            });
-        //}
-    });
-
-
-    app.controller('IndexController', function ($scope, $http, ContentService) {
-            $scope.content = ContentService;
-            $scope.load = function (url) {
-                $scope.content.url = url;
-            };
-                var req = {
-                    method: 'GET',
-                    url: 'http://localhost/CMPS1/API/index.php/login_controller/user',
-                    headers: {'Content-Type': 'application/json'}
-                }
-
-                $http(req).then(function (response) {
-                    if (response.data) {
-                        ContentService.url = '../CMPS1/tpls/main.html';
-
-                    }
-                    else {
-                       ContentService.url = '../CMPS1/tpls/login.html';
-                    }
-                });
-            $scope.logout = function(){
-                 $http.get('http://localhost/CMPS1/API/index.php/login_controller/logout')
-                    .then(function (response) {
-                     ContentService.url = '../CMPS1/tpls/login.html';
-                    });
+        $rootScope.$on('$locationChangeStart', function (event, next, current) {
+            // redirect to login page if not logged in and trying to access a restricted page
+            var restrictedPage = $.inArray($location.path(), ['/login']) === -1;
+            //var unrestrictedPage = $.inArray($location.path(), ['/','/about']) === -1;
+            var loggedIn = $rootScope.globals.currentUser;
+            console.log(loggedIn);
+            if (restrictedPage && !loggedIn) {
+                $location.path('/login');
             }
-
-         });
-
-        app.controller('LoginController', function ($scope, $http, ContentService) {
-            $scope.login = function (username, password) {
-                if (username == null || password == null) {
-
-                    $scope.istrue = function (bool) {
-
-                        return bool;
-                    }
-                }
-                else {
-                    var req = {
-                        method: 'POST',
-                        url: 'http://localhost/CMPS1/API/index.php/login_controller/validate',
-                        data: {
-                            'username': username,
-                            'password': password
-                        },
-                        headers: {'Content-Type': 'application/json'}
-                }
-
-                    $http(req).then(function (response) {
-
-                        var bool = response.data;
-                        if (bool) {
-                            ContentService.url = '../CMPS1/tpls/main.html';
-
-                        }
-                        else {
-                            $scope.istrue = function (bool) {
-                                return istrue;
-                            }
-                        }
-                    });
-                }
-            }
+            //else if (unrestrictedPage && loggedIn){
+            //    $location.path('/login');
+            //}
         });
+    }
 
-    })();
+})();

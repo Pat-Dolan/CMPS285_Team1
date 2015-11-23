@@ -5,8 +5,8 @@
         .module('app')
         .controller('HomeController', HomeController);
 
-    HomeController.$inject = ['$location', 'AuthenticationService', 'FlashService','$rootScope'];
-    function HomeController($location, AuthenticationService, FlashService , $rootScope) {
+    HomeController.$inject = ['$location', 'AuthenticationService','$cookieStore','$http'];
+    function HomeController($location, AuthenticationService, $cookieStore,$http) {
         var vm = this;
 
         vm.logout = logout;
@@ -14,6 +14,8 @@
         vm.getUsername = getUsername;
         vm.getEmail = getEmail;
         vm.checkAdmin = checkAdmin;
+        vm.getType = getType;
+        vm.getNews = getNews;
 
         function logout(){
             AuthenticationService.ClearCredentials();
@@ -23,14 +25,23 @@
             location.reload();
         }
         function getUsername(){
-            return $rootScope.globals.currentUser.username;
+            return  $cookieStore.get('globals')["currentUser"]["username"];
         }
-
         function getEmail(){
-            return $rootScope.globalProperties.properties.email;
+            return $cookieStore.get('globalProperties')["properties"]["email"];
+        }
+        function getType(){
+            return $cookieStore.get('globalProperties')["properties"]["type"];
         }
         function checkAdmin(){
-            return $rootScope.globalProperties.properties.type === "Admin";
+           return getType() == "Admin";
+
+        }
+        function getNews(){
+            $http.get('http://localhost/CMPS1/API/index.php/news_controller/News')
+                .success(function (data) {
+                    console.log(data);
+                });
         }
     }
 

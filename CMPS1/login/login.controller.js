@@ -5,8 +5,8 @@
         .module('app')
         .controller('LoginController', LoginController);
 
-    LoginController.$inject = ['$location', 'AuthenticationService', 'FlashService','$rootScope','$cookieStore'];
-    function LoginController($location, AuthenticationService, FlashService,$rootScope,$cookieStore) {
+    LoginController.$inject = ['$location', 'AuthenticationService', 'FlashService'];
+    function LoginController($location, AuthenticationService, FlashService) {
         var vm = this;
 
         vm.login = login;

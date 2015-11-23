@@ -6,7 +6,7 @@ class News_model extends CI_Model{
     }
     function get_news(){
 
-        $query = $this->db->get('news' , 10);
+        $query = $this->db->get('News' , 10);
         return $query->result();
 
     }

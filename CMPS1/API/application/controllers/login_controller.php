@@ -30,20 +30,4 @@ class Login_controller extends CI_Controller
 //        $this->load->view('verify', $data);
         echo json_encode($data);
     }
-
-    function user()
-    {
-        if (isset($_SESSION['username'])) {
-            $data['user'] = $_SESSION['username'];
-        } else {
-            $data['user'] = null;
-        }
-//        $this->load->view('verify', $data);
-        echo json_encode($data);
-    }
-
-    function logout()
-    {
-        session_destroy();
-    }
 }

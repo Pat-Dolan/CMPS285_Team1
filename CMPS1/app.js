@@ -27,10 +27,7 @@
     run.$inject = ['$rootScope', '$location', '$cookieStore', '$http'];
     function run($rootScope, $location, $cookieStore, $http) {
         // keep user logged in after page refresh
-        //$scope.content = ContentService;
-        //$scope.load = function (url) {
-        //    $scope.content.url = url;
-        //};
+
 
         $rootScope.globals = $cookieStore.get('globals') || {};
         if ($rootScope.globals.currentUser) {

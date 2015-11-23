@@ -3,6 +3,7 @@ body {
 
 }
 
+
 header, footer {
     background-color: inherit;
     padding: 5px;
@@ -12,9 +13,6 @@ img{
     background-size: 70%;
 }
 
- .navbar-default{
-
- }
 .newspaper {
     -webkit-column-count: 3; /* Chrome, Safari, Opera */
     -moz-column-count: 3; /* Firefox */
@@ -32,8 +30,8 @@ img{
 .even {
     padding: 1rem 1rem 1rem 0;
     display: table;
+    }
 
-}
 
 .even-date {
     width: 6rem;
@@ -49,7 +47,10 @@ img{
     padding: 0.7rem 3rem;
     text-align: center;
     border: 4px black;
+
 }
+
+
 .even-date .even-day {
     margin: 0;
     background-color: lightgray;

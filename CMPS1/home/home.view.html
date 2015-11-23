@@ -64,7 +64,10 @@
                         <a class="page-scroll" ng-click = "vm.refresh()" href="#main">Home</a>
                     </li>
                     <li>
-                        <a class="page-scroll" ng-click = "vm.refresh()" href="#news">News</a>
+                        <a class="page-scroll"  href="#news">News</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" ng-click = "vm.refresh()" href="#bills">Bills</a>
                     </li>
                     <li>
                         <a class="page-scroll"ng-click = "vm.refresh()" href="#about">About</a>
@@ -78,7 +81,7 @@
                     </li>
 
                     <li>
-                       <h1>HI, {{vm.getUsername()}}</h1>
+                        <a>HI, {{vm.getUsername()}}</a>
                     </li>
 
 
@@ -203,7 +206,11 @@
 
 
 <!--News page here-->
- <div id="news" ng-include="'../CMPS1/News/news.view.html'"></div>
-<!--about page here-->
- <div id="about" ng-include="'../CMPS1/About/about.view.html'"></div>
+ <section class="container-fluid" id="news" ng-include="'../CMPS1/News/news.view.html'"></section>
+
+<!--Bills page-->
+    <section class="container-fluid" id="bills" ng-include="'../CMPS1/Bills/Bills.php'"></section>
+
+    <!--about page here-->
+ <section class="container-fluid" id="about" ng-include="'../CMPS1/About/about.view.html'"></section>
 

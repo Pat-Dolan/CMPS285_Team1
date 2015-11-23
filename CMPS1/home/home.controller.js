@@ -5,8 +5,14 @@
         .module('app')
         .controller('HomeController', HomeController);
 
-    HomeController.$inject = ['$location', 'AuthenticationService','$cookieStore','$http'];
-    function HomeController($location, AuthenticationService, $cookieStore,$http) {
+    HomeController.$inject = ['$location', 'AuthenticationService','$cookieStore','$http','$scope'];
+    function HomeController($location, AuthenticationService, $cookieStore,$http,$scope) {
+
+        $http.get('http://localhost:8080/CMPS1/API/index.php/news_controller/News')
+            .success(function (data) {
+                $scope.news=data;
+            });
+
         var vm = this;
 
         vm.logout = logout;
@@ -15,7 +21,7 @@
         vm.getEmail = getEmail;
         vm.checkAdmin = checkAdmin;
         vm.getType = getType;
-        vm.getNews = getNews;
+        //vm.getNews = getNews;
 
         function logout(){
             AuthenticationService.ClearCredentials();
@@ -37,12 +43,14 @@
            return getType() == "Admin";
 
         }
-        function getNews(){
-            $http.get('http://localhost/CMPS1/API/index.php/news_controller/News')
+
+
+            $http.get('http://localhost:8080/CMPS1/API/index.php/news_controller/News')
                 .success(function (data) {
-                    console.log(data);
+                    $scope.news=data;
                 });
-        }
+
+
     }
 
 })();

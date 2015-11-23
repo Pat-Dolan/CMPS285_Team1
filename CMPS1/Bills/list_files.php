@@ -18,27 +18,26 @@ if($result) {
     }
     else {
         // Print the top of a table
-        echo '<link rel="stylesheet" href="/CMPS1/css/bills.css">
-
-
-            <div class="center" style="width:65%">
+        echo '     <link href="css/bills.css" rel="stylesheet">
+            <table>
               <caption>Bills</caption>
-                <ul>
-                    <li><b>Name</b></li>
-                    <li><b>Added</b></li>
-                    <li><b>Status</b></li>
-                    <li><b>&nbsp;</b></li>
-                </ul>';
+                <tr>
+                    <th><div><h4>Name</h4></div></th>
+                    <th><div><h4>Added</h4></div></th>
+                    <th><div><h4>Status</h4></div></th>
+                    <th><div><h4>&nbsp;</h4></div></th>
+                </tr>';
 
         // Print each file
         while($row = $result->fetch_assoc()) {
             echo "
-                <ul>
-                    <li>{$row['name']}</li>
-                    <li>{$row['added']}</li>
-                    <li>{$row['status']}</li>
-                    <li><input type='button' value='download'  onclick='../CMPS1/Bills/get_file.php?id={$row['id']}'></li>
-                </ul>";
+
+                <tr>
+                    <td><div>{$row['name']}</div></td>
+                    <td><div>{$row['added']}</div></td>
+                    <td><div>{$row['status']}</div></td>
+                    <td><div><a  href='/CMPS1/Bills/get_file.php?id={$row['id']}'><input type='button' value='Download'/></a></div></td>
+                </tr>";
         }
         echo '</table>';
     }

@@ -42,7 +42,7 @@
             if (restrictedPage && !loggedIn) {
                 $location.path('/login');
             }
-            //else if (unrestrictedPage && loggedIn){
+          d  //else if (unrestrictedPage && loggedIn){
             //    $location.path('/login');
             //}
         });

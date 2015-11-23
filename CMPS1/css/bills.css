@@ -1,81 +1,43 @@
-@import url(http://fonts.googleapis.com/css?family=Exo:100,200,400);
-@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:700,400,300);
 
 
-body{
-    margin-top: 125px;
-    padding: 0;
-    background-image: url(/CMPS1/images/FlagsDesktop.jpg);
-
-    color: white;
-    font-family: Arial;
-    font-size: 14px;
+@font-face {
+    font-family: 'BillsFont';
+    src: url('/CMPS1/fonts/Oswald-Regular.ttf');
 }
-a {
-    color: yellow;
+caption{
+    font-family: 'BillsFont';
+    font-size: 40px;
 }
-a:hover{
-    color: green;
+table{
+
+    margin-left: 18%;
+
+    broder:1.5px solid black;
+    broder-radius:1;
 }
-
-
-.body{
-    position: absolute;
-    top: -20px;
-    left: -20px;
-    right: -40px;
-    bottom: -40px;
-    width: auto;
-    height: auto;
-    background: linear-gradient(#008000,#003300);
-    background-size: cover;
-    -webkit-filter:blur(1.5px) ;
-    z-index: 0;
+th{
+    font-family:'BillsFont';
+    font-weight: bold;
+font-size: large;
+    padding: 20px;
+    text-align:left;
+    background-color:grey;
 }
+td {
+    font-family: 'BillsFont';
+    font-weight: 400;
+    padding: 20px;
+    background-color:lightgray;
 
-.grad{
-    position: absolute;
-    top: -20px;
-    left: -20px;
-    right: -40px;
-    bottom: -40px;
-    width: auto;
-    height: auto;
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.65))); /* Chrome,Safari4+ */
-    z-index: 1;
-    opacity: 0.7;
 }
 
-.header{
-    position: absolute;
-    top: calc(50% - 35px);
-    left: calc(50% - 255px);
-    z-index: 2;
-}
+td input[type=button]{
+    font-family: 'BillsFont';
+    width:120px;
+    height:40px;
+    background-color:#555555 ;
+    border: 4px solid #555555;
+    cursor: pointer;
+    border-radius: 2.5px;
 
-.header div{
-    float: left;
-    color: #fff;
-    font-family: 'Exo', sans-serif;
-    font-size: 35px;
-    font-weight: 200;
 }
-table th  {
-    background-color: transparent;
-    color: goldenrod;
-    text-align: left;
-}
-table.center{
-    margin-top: 100px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: left;
-}
-body{text-align:center;}
-
-table caption{
-    text-align: center;
-    color: yellow;
-    font-size: 24px;
-}
-

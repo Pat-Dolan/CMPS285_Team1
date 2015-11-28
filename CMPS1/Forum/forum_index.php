@@ -24,7 +24,7 @@
                 $id = $row['id'];
                 $title = $row['category_title'];
                 $description = $row['category_description'];
-                $categories .= "<a align='center' href='view_category.php?cid=".$id."'><p style='color:darkslategray border:dotted'><h4>".$title." </h4></p>".$description."</a>";
+                $categories .= "<a align='center ' href='/CMPS1/Forum/view_category.php?cid=".$id."' class='cat_links' ><p style='color:darkslategray border:dotted'><h4>".$title." </h4></p>".$description."</a>";
             }
             echo $categories;
         }else{

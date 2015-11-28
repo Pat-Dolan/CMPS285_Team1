@@ -26,7 +26,7 @@
             //    });
              var req = {
                  method: 'POST',
-                 url: 'http://' + window.location.host +'/CMPS1/API/index.php/update_controller/addUser',
+                 url: 'http://' + window.location.host +'/CMPS1/API/index.php/login_controller/validate',
                  data: {
                      'username': username,
                      'password': password

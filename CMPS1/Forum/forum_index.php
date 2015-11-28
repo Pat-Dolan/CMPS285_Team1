@@ -2,18 +2,19 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <title>Untitled Document</title>
-    <link rel="stylesheet" type="text/css" href="/CMPS1/css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="/CMPS1/css/bills.css"/>
+
 </head>
 
-<body>
+<body  >
 <div id="wrapper">
-    <h2>SGA Connect Forum</h2>
-    <hr/>
+    <h1 align="center" style="margin-top: 15px">SGA Connect Forum</h1>
+
     <div id="content">
         <?php
         include_once("connect.php");
-            echo "<p>You are logged in as ";
+            echo "<p><h3>You are logged in as <i> {{vm.getUsername()}}</i></h3></p> ";
+        echo "<p><h2 align='center'>Discussion Categories</h2></p> ";
 
         $sql = "SELECT * FROM categories ORDER BY category_title ASC";
         $res = mysqli_query($myConnection,$sql) or die(mysqli_error());
@@ -23,11 +24,11 @@
                 $id = $row['id'];
                 $title = $row['category_title'];
                 $description = $row['category_description'];
-                $categories .= "<a href='Forum/view_category.php?cid=".$id."' class='cat_links'>".$title." - <font size='-1'>".$description."</font></a>";
+                $categories .= "<a align='center' href='view_category.php?cid=".$id."'><p style='color:darkslategray border:dotted'><h4>".$title." </h4></p>".$description."</a>";
             }
             echo $categories;
         }else{
-            echo "<p>There are no categories available yet.</p>";
+            echo "<p><h4>There are no categories available yet.</h4></p>";
         }
         ?>
     </div>

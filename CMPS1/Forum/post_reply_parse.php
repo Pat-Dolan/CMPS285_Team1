@@ -15,8 +15,8 @@ include_once("connect.php");
         $res3 = mysqli_query($myConnection,$sql3) or die(mysqli_error());
 
         if (($res) && ($res2) && ($res3)){
-            echo "<p>Your reply has been successfully posted. <a href='view_topic.php?cid=".rawurlencode($cid)."&tid=".
-                rawurlencode($tid)."'>Click here to return to the topic.</a></p>";
+            echo  header("Location:/CMPS1/forum/view_topic.php?cid=".rawurlencode($cid)."&tid=".
+                rawurlencode($tid));
         } else{
             echo "<p>There was a problem posting your reply. Try again later.</p>";
         }

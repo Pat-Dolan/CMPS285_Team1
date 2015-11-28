@@ -8,7 +8,7 @@
     HomeController.$inject = ['$location', 'AuthenticationService','$cookieStore','$http','$scope'];
     function HomeController($location, AuthenticationService, $cookieStore,$http,$scope) {
 
-        $http.get('http://' + window.location.host +'/CMPS1/API/index.php/update_controller/addUser')
+        $http.get('http://' + window.location.host +'/CMPS1/API/index.php/news_controller/News')
             .success(function (data) {
                 $scope.news=data;
             });

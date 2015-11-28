@@ -16,15 +16,15 @@ class Update_controller extends CI_Controller
 
     function addUser()
     {
-        $json = key($this->input->post(NULL, TRUE));
-        $json = json_decode($json);
-
-        $data['firstname'] = $json->firstname;
-        $data['lastname'] = $json->lastname;
-        $data['username'] = $json->username;
-        $data['password'] = md5($json->password);
-        $data['email'] = $json->email;
-        $data['type'] = $json->type;
+//        $json = key($this->input->post(NULL, TRUE));
+//        $json = json_decode($json);
+        $json = json_decode(trim(file_get_contents('php://input')), true);
+        $data['firstname'] = $json['firstname'];
+        $data['lastname'] = $json['lastname'];
+        $data['username'] =$json['username'];
+        $data['password'] = md5($json['password']);
+        $data['email'] = $json['email'];
+        $data['type'] = $json['type'];
 
 //       $data['firstname'] = $this->input->post('firstname');
 //       $data['lastname'] = $this->input->post('lastname');
@@ -34,17 +34,16 @@ class Update_controller extends CI_Controller
 //       $data['type'] = $this->input->post('type');
 
 
-        $query = $this->update_model->addUser($data);
+        $this->update_model->addUser($data);
 
     }
 
     function deleteUser()
     {
-        $json = key($this->input->post(NULL, TRUE));
-        $json = json_decode($json);
-        $username = $json->username;
+        $json = json_decode(trim(file_get_contents('php://input')), true);
+        $username = $json['username'];
 //         $username = $this->input->post('username');
-        $query = $this->update_model->deleteUser($username);
+        $this->update_model->deleteUser($username);
     }
 
     function getUser()

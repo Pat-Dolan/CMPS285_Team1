@@ -1,42 +1,49 @@
 
-
+.news{
+    }
 @font-face {
     font-family: 'BillsFont';
     src: url('/CMPS1/fonts/Oswald-Regular.ttf');
 }
-caption{
+caption h1{
+    margin-left: 45%;
     font-family: 'BillsFont';
     font-size: 40px;
-}
-table{
 
-    margin-left: 18%;
+}
+
+table{
+    opacity: .90;
 
     broder:1.5px solid black;
     broder-radius:1;
+    margin-bottom:20%; !important;
 }
 th{
     font-family:'BillsFont';
     font-weight: bold;
 font-size: large;
-    padding: 20px;
+    padding: 8px;
     text-align:left;
-    background-color:grey;
+    background-color:slategray ;
 }
 td {
     font-family: 'BillsFont';
     font-weight: 400;
-    padding: 20px;
-    background-color:lightgray;
+    padding: 5px;
+    padding-bottom: 15px; !important;
+    background-color:lightgrey;
 
 }
 
 td input[type=button]{
+    color: white;
     font-family: 'BillsFont';
-    width:120px;
-    height:40px;
+    font-color: white;
+    width:100%;
+    height:35px;
     background-color:#555555 ;
-    border: 4px solid #555555;
+    border: 0px solid #555555;
     cursor: pointer;
     border-radius: 2.5px;
 

@@ -21,7 +21,7 @@
                 templateUrl: 'login/login.view.html',
                 controllerAs: 'vm'
             })
-            .otherwise({ redirectTo: '/login' });
+            //.otherwise({ redirectTo: '/login' });
     }
 
     run.$inject = ['$rootScope', '$location', '$cookieStore', '$http'];

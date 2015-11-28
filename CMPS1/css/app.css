@@ -1,16 +1,14 @@
-body {
-    font-family: 'Open Sans', sans-serif;
-
-}
-
 
 header, footer {
     background-color: inherit;
-    padding: 5px;
-    text-align: center;
+        text-align: center;
 }
 img{
     background-size: 70%;
+}
+
+#accordion{
+    cursor: pointer;
 }
 
 .newspaper {
@@ -53,7 +51,7 @@ img{
 
 .even-date .even-day {
     margin: 0;
-    background-color: lightgray;
+    background-color: lightgrey;
     padding: 0.5rem 2rem;
     text-align: center;
     font-size: 2rem;

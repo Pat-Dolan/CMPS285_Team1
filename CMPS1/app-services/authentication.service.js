@@ -26,7 +26,7 @@
             //    });
              var req = {
                  method: 'POST',
-                 url: 'http://localhost/CMPS1/API/index.php/login_controller/validate',
+                 url: 'http://localhost:8080/CMPS1/API/index.php/login_controller/validate',
                  data: {
                      'username': username,
                      'password': password

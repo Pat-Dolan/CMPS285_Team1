@@ -19,8 +19,10 @@ if($result) {
     else {
         // Print the top of a table
         echo '     <link href="css/bills.css" rel="stylesheet">
-            <table>
-              <caption>Bills</caption>
+           <div>
+            <table class="container-fluid" align="center">
+           <caption><h1>Bills</h1></caption>
+
                 <tr>
                     <th><div><h4>Name</h4></div></th>
                     <th><div><h4>Added</h4></div></th>
@@ -39,7 +41,7 @@ if($result) {
                     <td><div><a  href='/CMPS1/Bills/get_file.php?id={$row['id']}'><input type='button' value='Download'/></a></div></td>
                 </tr>";
         }
-        echo '</table>';
+        echo '</table></div>';
     }
 
     // Free the result

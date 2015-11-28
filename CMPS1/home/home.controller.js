@@ -21,7 +21,7 @@
         vm.getEmail = getEmail;
         vm.checkAdmin = checkAdmin;
         vm.getType = getType;
-        //vm.getNews = getNews;
+        vm.addUser = addUser;
 
         function logout(){
             AuthenticationService.ClearCredentials();
@@ -40,15 +40,32 @@
             return $cookieStore.get('globalProperties')["properties"]["type"];
         }
         function checkAdmin(){
-           return getType() == "Admin";
+           return getType() == "admin";
 
         }
+        function addUser(user){
+            //console.log(user.firstname);
+            //console.log(user.lastname);
+            //console.log(user.username);
+            //console.log(user.password);
+            //console.log(user.email);
+            //console.log(user.type);
 
-
-            $http.get('http://localhost:8080/CMPS1/API/index.php/news_controller/News')
-                .success(function (data) {
-                    $scope.news=data;
-                });
+            var post = {
+                method: 'POST',
+                url: 'http://localhost:8080/CMPS1/API/index.php/update_controller/addUser',
+                data: {
+                    'firstname': user.firstname,
+                    'lastname' : user.lastname,
+                    'username': user.username,
+                    'password': user.password,
+                    'email': user.email,
+                    'type':user.type
+                },
+                headers: {'Content-Type': 'application/json'}
+            };
+            $http(post);
+        }
 
 
     }

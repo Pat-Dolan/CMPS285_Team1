@@ -3,17 +3,17 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
     <link href="../CMPS1/css/app.css" rel="stylesheet" type="text/css" />
     <script src="../CMPS1/js/bootstrap.min.js"></script>
-
-    <div style=" margin-top: 50px">
+<h1 align="center">NEWS</h1>
+    <div style=" margin-top: 20px">
         <div class="container-fluid" >
-            <div class="row">
+            <div class="row" >
                 <div class="col-md-6 col-md-offset-3">
 
-                    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true" >
+                    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true"  style="opacity: .85"  >
                         <div class="panel panel-default" ng-repeat="each in news">
                             <div class="panel-heading">
                                 <h4 class="panel-title">
-                                    <span class="collapsed" data-toggle="collapse" data-parent="#accordion" data-target="#{{each.id}}" aria-expanded="false" >
+                                    <span class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#{{each.id}}" aria-expanded="false" >
                                         <article class="even">
 
                                             <div class="even-date">
@@ -31,9 +31,9 @@
                                 </h4>
                             </div>
                             <div id="{{each.id}}" class="panel-collapse collapse" role="tabpanel" >
-                                <div class="panel-body">
+                                <div class="panel-body"  >
 
-                                    <p>{{each.content}}</p>
+                                    <p style="font-size: 16px">{{each.content}}</p>
 
                                 </div>
                             </div>

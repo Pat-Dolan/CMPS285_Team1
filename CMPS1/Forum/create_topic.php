@@ -5,7 +5,7 @@ $cid = $_GET['cid']; ?>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Forum</title>
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="/CMPS1/css/bills.css"/>
 </head>
 
 <body>

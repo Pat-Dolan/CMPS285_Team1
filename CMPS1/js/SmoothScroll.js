@@ -32,7 +32,7 @@ var defaultOptions = {
     // Other
     touchpadSupport   : true,
     fixedBackground   : true, 
-    excluded          : ""    
+    excluded          : ""
 };
 
 var options = defaultOptions;

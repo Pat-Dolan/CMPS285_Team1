@@ -1,31 +1,17 @@
 ﻿
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/home.css" rel="stylesheet">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/home.css" rel="stylesheet">
 
-
-
-<!-- Custom CSS -->
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <!--<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>-->
-    <!--<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>-->
-    <!--<![endif]&ndash;&gt;-->
-
-
-
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
-    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
-    <link href="http://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" rel="stylesheet" />
-
-    <!--<link rel="stylesheet" href="/CMPS1/css/style.css" />-->
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
+<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
+<link href="http://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" rel="stylesheet" />
 
 
 <!--nav bar here-->
 <nav id="page-top" class="index">
+
     <!--<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">-->
     <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>-->
     <!--<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>-->
@@ -60,9 +46,6 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800,600,300' rel='stylesheet' type='text/css'>
     <script type="text/javascript" src="/CMPS1/js/modernizr.custom.js"></script>
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
@@ -75,7 +58,11 @@
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-                <a class="navbar-brand" href="#/"> SGA CONNECT<strong></strong></a> </div>
+                <a class="navbar-brand page-scroll"  href="#top"> SGA CONNECT<strong></strong></a>
+
+
+
+            </div>
 
 
 
@@ -88,15 +75,10 @@
                     <li><a href="#about" class="page-scroll">About</a></li>
                     <li><a href="#forum" class="page-scroll">Forum</a></li>
                     <li><a ng-show = "vm.checkAdmin()" class="page-scroll" href="#Admin">Admin</a></li>
-                    <li><a style="cursor: hand" ng-click="vm.logout()">Logout</a></li>
-                    <li> <a>HI,{{vm.getUsername()}}</a></li>
-                    <!--<li class="navbar"><a class="navbar-toggle collapse" data-toggle="collapse" data-target="#top"> HI,{{vm.getUsername()}} <span class="caret"></span></a>-->
-                        <!--<ul class="collapse navbar-collapse" id="top">-->
-                            <!--<li><a ng-show = "vm.checkAdmin()">Admin</a></li>-->
-                            <!--<li><a style="cursor: hand" ng-click="vm.logout()">Logout</a></li>-->
-                        <!--</ul>-->
+                    <li><a style="cursor: pointer !important" ng-click="vm.logout()">Logout</a></li>
+                    <li>&nbsp; &nbsp;</li>
+                    <li> <a><i>HI,{{vm.getUsername()}}</i></a></li>
 
-                    <!--</li>-->
 
                 </ul>
             </div>
@@ -104,23 +86,23 @@
         </div>
         <!-- /.container-fluid -->
     </nav>
-    </nav>
+</nav>
 
 
 
-    <header class="text-center" name="home">
-        <div class="intro-text">
-            <h1 class="wow fadeInDown">We are <strong><span class="color">SGA</span></strong></h1>
-            <p style="font-size: 20px" class="wow fadeInDown">SOUTHEASTERN LOUISIANA UNIVERSITY</p>
-            <p style="font-size: 25px" class="wow fadeInDown color">LION UP</p>
-            <a class="page-scroll" href="#main" data-wow-delay="200ms"></a>
-            <p class="down-button">
-                <a href="#main" class="btn  page-scroll">
-                    <i class="fa fa-arrow-circle-down fa-4x"></i>
-                </a>
-            </p>
-        </div>
-    </header>
+<header class="text-center" name="home" id="top">
+    <div class="intro-text">
+        <h1 class="wow fadeInDown">We are <strong><span class="color">SGA</span></strong></h1>
+        <p style="font-size: 20px" class="wow fadeInDown">SOUTHEASTERN LOUISIANA UNIVERSITY</p>
+        <p style="font-size: 25px" class="wow fadeInDown color">LION UP</p>
+        <a class="page-scroll" href="#main" data-wow-delay="200ms"></a>
+        <p class="down-button">
+            <a href="#main" class="btn  page-scroll">
+                <i class="fa fa-arrow-circle-down fa-4x"></i>
+            </a>
+        </p>
+    </div>
+</header>
 
 
 
@@ -188,7 +170,7 @@
                 <img class="img-circle" src="/CMPS1/images/bigevent.jpg">
                 <h2>The Big Event</h2>
                 <p style="font-size: 16px">The Big Event is one big day of community service in which the Southeastern Campus gives back to the surrounding areas of Hammond and Ponchatoula.</p>
-                <a style="color: black !important; " href="http://www.southeastern.edu/admin/sga/big_event/" target="_blank"><h4 style="font-size: 16px !important;">More info..</h4></a>
+                <a style="color: black !important; " href="http://www.southeastern.edu/admin/sga/big_event/"><h4 style="font-size: 16px !important;">More info..</h4></a>
             </div>
             <div class="activity-element col-md-4">
                 <img class="img-circle" src="/CMPS1/images/scantron.jpg">
@@ -203,15 +185,18 @@
 
 <!--News page here-->
 <section id="news">
- <div  class="container-fluid" id="services-section" ng-include="'../CMPS1/News/news.view.html'"></div>
+    <div  class="container-fluid" id="services-section" ng-include="'../CMPS1/News/news.view.html'"></div>
 </section>
 <!--Bills page-->
 <div id="bills">
-<div  class="container-fluid"  style="background-color: goldenrod" ng-include="'../CMPS1/Bills/list_files.php'"></div>
+    <div  class="container-fluid"  style="background-color: goldenrod" ng-include="'../CMPS1/Bills/list_files.php'"></div>
 </div>
-    <!--about page here-->
+<!--about page here-->
 <div id="about">
-<div class="container-fluid" id="about-section"  ng-include="'../CMPS1/About/about.view.html'"></div>
+    <div class="container-fluid" id="about-section"  ng-include="'../CMPS1/About/about.view.html'"></div>
 </div>
-<div class="container-fluid" id="forum" ng-include="'../CMPS1/Forum/forum_index.php'" style="background-color: #1b6d85"></div>
-<div  class="container-fluid" id="Admin" ng-include="'../CMPS1/Admin/admin.view.html'" style="background-color:white " ></div>
+<div  id="forum" style="height:600px">
+<div class="container-fluid" ng-include="'../CMPS1/Forum/forum_index.php'" ></div>
+</div>
+<div  ng-show = "vm.checkAdmin()" class="container-fluid" id="Admin" ng-include="'../CMPS1/Admin/admin.view.html'" style="background-color:whitesmoke  " ></div>
+<div style="background-color: #292c2f" ng-include="'../CMPS1/footer/footer-distributed-with-address-and-phones.html'"></div>

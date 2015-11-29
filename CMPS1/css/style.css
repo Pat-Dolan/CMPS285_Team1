@@ -1,9 +1,29 @@
 body, html {
+<<<<<<< HEAD
 	font-family: 'Lato', sans-serif;
+=======
+	/*font-family: 'Lato', sans-serif;*/
+>>>>>>> origin/master
 	text-rendering: optimizeLegibility !important;
 	-webkit-font-smoothing: antialiased !important;
 	color: #1c424d;
 }
+<<<<<<< HEAD
+=======
+::-webkit-scrollbar {
+	width: 12px;
+}
+
+::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px #92999f;
+	border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+	border-radius: 8px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+>>>>>>> origin/master
 
 h1 {
 	font-weight: 700;
@@ -78,12 +98,20 @@ hr {
 	font-size: 16px;
 	font-weight: 600;
 	letter-spacing: 1px;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/master
 }
 #menu.navbar-default .navbar-nav > li > a:hover {
 	color: #f3ca27;
 }
 .on {
+<<<<<<< HEAD
 	background-color: grey !important;
+=======
+	background-color: darkslategray !important;
+>>>>>>> origin/master
 	padding: 0 !important;
 }
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
@@ -92,6 +120,10 @@ hr {
 }
 .navbar-toggle {
 	border-radius: 0;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/master
 }
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
 	background-color: #f3ca27;
@@ -330,6 +362,10 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 @media (max-width: 603px) {
 #menu.navbar-default {
 	background-color: rgba(0, 0, 0, 0.7);
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/master
 }
 label {
 	float: none !important

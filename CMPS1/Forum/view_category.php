@@ -3,8 +3,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <title>Untitled Document</title>
-    <link rel="stylesheet" type="text/css" href="/CMPS1/css/style.css"/>
+    <title>Forum Topic</title>
+
+    <link rel="stylesheet" type="text/css" href="/CMPS1/css/bills.css"/>
 </head>
 
 <body>
@@ -15,7 +16,7 @@
         <?php
         include_once("connect.php");
         $cid = $_GET['cid'];
-        $logged = "<a href='/CMPS1/forum/create_topic.php?cid=".$cid."'>Click Here To Create a Topic</a>";
+        $logged = "<p><a href='/CMPS1/forum/create_topic.php?cid=".$cid."'>Click Here To Create a Topic</a></p>";
         $sql = "SELECT id FROM categories WHERE id='".$cid."' LIMIT 1";
         $res = mysqli_query($myConnection,$sql) or die(mysqli_error());
         $topic = "";
@@ -45,11 +46,11 @@
                 echo $topics;
 
             } else{
-                echo "<a href='/CMPS1/forum/forum_index.php'>Return to Forum Index</a><hr />";
+                echo "<a href='/CMPS1/#/'>Return </a><hr />";
                 echo "<p>There are no topics in this category yet.".$logged."</p>";
             }
         } else{
-            echo "<a href='/CMPS1/forum/forum_index.php'>Return to Forum Index</a><hr />";
+            echo "<a href='/CMPS1/#/'>Return </a><hr />";
             echo "<p>You are trying to view a category that does not exist yet.</p>";
         }
         ?>

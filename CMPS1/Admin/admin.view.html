@@ -1,10 +1,4 @@
 
-<!--
-Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,54 +14,53 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <form>
 
         <ul class="left-form">
-            <h2>New Account:</h2>
+
+            <h3>Firstname</h3>
             <li>
                 <input type="text"   placeholder="Firstname" ng-model="user.firstname"  required/>
                 <div class="clear"> </div>
             </li>
+            <h3>Lastname</h3>
             <li>
                 <input type="text"   placeholder="Lastname" ng-model="user.lastname" required/>
                 <div class="clear"> </div>
             </li>
+            <h3>Username</h3>
             <li>
                 <input type="text"   placeholder="Username" ng-model="user.username" required/>
                 <div class="clear"> </div>
             </li>
+            <h3>Email</h3>
             <li>
-                <input type="text"   placeholder="Email" ng-model="user.email" required/>
+                <input type="text"   placeholder="Email@selu.edu" ng-model="user.email" required/>
                 <div class="clear"> </div>
             </li>
-
+            <h3>Password</h3>
             <li>
                 <input type="text"   placeholder="password" ng-model="user.password" required/>
                 <div class="clear"> </div>
             </li>
-            <!--<li>-->
-            <!--<input type="password"   placeholder="re-enter password"  required/>-->
-            <!--<div class="clear"> </div>-->
-            <!--</li> -->
-            <input type="radio" ng-model="user.type" value="admin" />Admin<br />
-            <input type="radio" ng-model="user.type" value="user" />User<br />
+            <h3>User Type</h3>
+
+            <input type="radio" ng-model="user.type" value="admin" />Admin<br/>
+            <input type="radio" ng-model="user.type" value="user"  />User<br/>
+
             <p></p>
             <input type="submit" value="Add User" ng-click="vm.addUser(user)">
             <div class="clear"> </div>
         </ul>
 
     </form>
-    <!--<form >-->
-    <!--First Name: <input type="text" ng-model="user.firstname" /><br />-->
-    <!--Last Name: <input type="text" ng-model="user.lastname" /><br />-->
-    <!--User Name: <input type="text" ng-model="user.username" /><br />-->
-    <!--Password: <input type="text" ng-model="user.password" /><br />-->
-    <!--E-mail: <input type="email" ng-model="user.email" /><br />-->
-    <!--type: <input type="radio" ng-model="user.type" value="Admin" />Admin-->
-    <!--<input type="radio" ng-model="user.type" value="User" />User<br />-->
-    <!--<input type="submit" ng-click="vm.addUser(user)" value="Save" />-->
 
-    <!--</form>-->
 
 </div>
-<div>{{vm.getUser}}</div>
+<ul class="right-form" >
 
+<li style="margin-top: 5%"><h1>Creation Status:</h1></li>
+    <div >
+    <li ng-show="!vm.stat"  ><p>&nbsp;</p></li>
+    <li ng-show="vm.stat" ><p><h1 style="color: red !important">{{vm.message}}</h1></p></li>
+    </div>
+</ul>
 </body>
 </html>

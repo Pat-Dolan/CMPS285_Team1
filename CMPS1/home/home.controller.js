@@ -9,9 +9,13 @@
     function HomeController($location, AuthenticationService, $cookieStore,$http,$scope) {
 
 <<<<<<< HEAD
+        $http.get('http://' + window.location.host +'/CMPS1/API/index.php/news_controller/News')
+=======
+<<<<<<< HEAD
         $http.get('http://'+ window.location.host +'/CMPS1/API/index.php/news_controller/News')
 =======
-        $http.get('http://'+ window.location.host +'/CMPS1/API/index.php/news_controller/News')
+        $http.get('http://localhost:8080/CMPS1/API/index.php/news_controller/News')
+>>>>>>> parent of 248422e... Unnecessary tables/ Port issue
 >>>>>>> origin/master
             .success(function (data) {
                 $scope.news=data;
@@ -63,7 +67,11 @@
 
                 var post = {
                     method: 'POST',
+<<<<<<< HEAD
                     url: 'http://'+ window.location.host +'/CMPS1/API/index.php/update_controller/addUser',
+=======
+                    url: 'http://localhost:8080/CMPS1/API/index.php/update_controller/addUser',
+>>>>>>> parent of 248422e... Unnecessary tables/ Port issue
                     data: {
                         'firstname': user.firstname,
                         'lastname': user.lastname,

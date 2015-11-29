@@ -9,9 +9,9 @@
     function HomeController($location, AuthenticationService, $cookieStore,$http,$scope) {
 
 <<<<<<< HEAD
-        $http.get('http://' + window.location.host +'/CMPS1/API/index.php/news_controller/News')
+        $http.get('http://'+ window.location.host +'/CMPS1/API/index.php/news_controller/News')
 =======
-        $http.get('http://localhost:8080/CMPS1/API/index.php/news_controller/News')
+        $http.get('http://localhost:'+ window.location.host +'/CMPS1/API/index.php/news_controller/News')
 >>>>>>> origin/master
             .success(function (data) {
                 $scope.news=data;
@@ -63,7 +63,7 @@
 
                 var post = {
                     method: 'POST',
-                    url: 'http://localhost:8080/CMPS1/API/index.php/update_controller/addUser',
+                    url: 'http://localhost:'+ window.location.host +'/CMPS1/API/index.php/update_controller/addUser',
                     data: {
                         'firstname': user.firstname,
                         'lastname': user.lastname,

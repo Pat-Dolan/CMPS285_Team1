@@ -9,7 +9,7 @@ if(isset($_POST['topic_submit'])) {
         $cid = $_POST['cid'];
         $title = $_POST['topic_title'];
         $content = $_POST['topic_content'];
-        //$creator = $_SESSION['uid'];
+        $creator = "<html>{{vm.getUsername()}}</html>";
         $sql = "INSERT INTO topics (category_id, topic_title, topic_creator, topic_date,topic_reply_date) VALUES (
               '" . $cid . "','" . $title . "','".$creator."',now(), now())";
         $res = mysqli_query($myConnection, $sql) or die(mysqli_error($myConnection));

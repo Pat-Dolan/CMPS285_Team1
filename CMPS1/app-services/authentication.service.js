@@ -26,11 +26,9 @@
             //    });
              var req = {
                  method: 'POST',
-<<<<<<< HEAD
+                 
                  url: 'http://' + window.location.host +'/CMPS1/API/index.php/login_controller/validate',
-=======
-                 url: 'http://localhost:8080/CMPS1/API/index.php/login_controller/validate',
->>>>>>> parent of 248422e... Unnecessary tables/ Port issue
+
                  data: {
                      'username': username,
                      'password': password
